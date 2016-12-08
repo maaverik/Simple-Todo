@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
+import AccountsUIWrapper from './AccountsUIWrapper.jsx';
+
  
 import { Tasks } from '../api/tasks.js';
  
@@ -59,6 +61,8 @@ class App extends Component {
             />
             Hide Completed Tasks
           </label>
+
+          <AccountsUIWrapper />
 
           <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
             <input
